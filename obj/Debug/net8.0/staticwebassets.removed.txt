@@ -1,0 +1,10 @@
+C:\Users\Zyluz\Desktop\C# Projects\OnePageWebVer3\OnePageWebVer3\wwwroot\images\css\site.css
+C:\Users\Zyluz\Desktop\C# Projects\OnePageWebVer3\OnePageWebVer3\wwwroot\modern\Modern1.png
+C:\Users\Zyluz\Desktop\C# Projects\OnePageWebVer3\OnePageWebVer3\wwwroot\modern\Modern2.png
+C:\Users\Zyluz\Desktop\C# Projects\OnePageWebVer3\OnePageWebVer3\wwwroot\modern\Modern3.jpg
+C:\Users\Zyluz\Desktop\C# Projects\OnePageWebVer3\OnePageWebVer3\wwwroot\modern\Modern4.jpg
+C:\Users\Zyluz\Desktop\C# Projects\OnePageWebVer3\OnePageWebVer3\wwwroot\modern\Modern5.jpg
+C:\Users\Zyluz\Desktop\C# Projects\OnePageWebVer3\OnePageWebVer3\wwwroot\modern\Modern6.jpg
+C:\Users\Zyluz\Desktop\C# Projects\OnePageWebVer3\OnePageWebVer3\wwwroot\modern\Modern7.png
+C:\Users\Zyluz\Desktop\C# Projects\OnePageWebVer3\OnePageWebVer3\wwwroot\modern\Modern8.jpg
+C:\Users\Zyluz\Desktop\C# Projects\OnePageWebVer3\OnePageWebVer3\wwwroot\modern\Modern9.jpg
