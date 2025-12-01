@@ -1,0 +1,63 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0,0,0,0.4);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Move the previous button slightly down and inwards */
+.carousel-control-prev {
+    top: 50%; /* Vertical center */
+    left: 10px; /* Distance from left edge */
+    transform: translateY(-50%); /* Keep it vertically centered */
+    width: 50px; /* Optional: adjust size */
+    height: 50px;
+    background-color: rgba(0,0,0,0.3); /* Optional: background for visibility */
+    border-radius: 50%; /* Make it round */
+}
+
+/* Move the next button slightly down and inwards */
+.carousel-control-next {
+    top: 50%; /* Vertical center */
+    right: 10px; /* Distance from right edge */
+    transform: translateY(-50%); /* Keep it vertically centered */
+    width: 50px; /* Optional: adjust size */
+    height: 50px;
+    background-color: rgba(0,0,0,0.3); /* Optional: background for visibility */
+    border-radius: 50%; /* Make it round */
+}
+
+
+#ContemporaryCarousel {
+    width: 800px; /* set any width you want */
+    height: 600px; /* set any height you want */
+    margin: 0 auto; /* centers the whole carousel horizontally */
+    position: relative;
+    overflow: hidden; /* prevents images from overflowing */
+}
+
+#ContemporaryCarousel .carousel-inner {
+    display: flex;  /* Ensures flex layout for sliding */
+    height: 100%;   /* Fills the carousel height */
+}
+
+#ContemporaryCarousel .carousel-item {
+    position: relative;  /* Allows absolute positioning of images */
+    height: 100%;       /* Fills the carousel height */
+}
+
+#ContemporaryCarousel .carousel-item img {
+    position: absolute;      /* Centers the image absolutely within the item */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Shifts to true center */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* keeps aspect ratio and fits inside container */
+}
