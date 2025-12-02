@@ -1,3 +1,4 @@
+/* # INDICATORS */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(1);
@@ -11,8 +12,7 @@
     border-radius: 50%;
 }
 
-/* Move the previous button slightly down and inwards */
-.carousel-control-prev {
+.carousel-control-prev { /* Move the previous button slightly down and inwards */
     top: 50%; /* Vertical center */
     left: 10px; /* Distance from left edge */
     transform: translateY(-50%); /* Keep it vertically centered */
@@ -22,8 +22,8 @@
     border-radius: 50%; /* Make it round */
 }
 
-/* Move the next button slightly down and inwards */
-.carousel-control-next {
+
+.carousel-control-next { /* Move the next button slightly down and inwards */
     top: 50%; /* Vertical center */
     right: 10px; /* Distance from right edge */
     transform: translateY(-50%); /* Keep it vertically centered */
@@ -32,8 +32,9 @@
     background-color: rgba(0,0,0,0.3); /* Optional: background for visibility */
     border-radius: 50%; /* Make it round */
 }
+/*INDICATORS*/
 
-
+/* # CONTEMPORARY CAROUSEL */
 #ContemporaryCarousel {
     width: 800px; /* set any width you want */
     height: 600px; /* set any height you want */
@@ -52,12 +53,110 @@
     height: 100%;       /* Fills the carousel height */
 }
 
-#ContemporaryCarousel .carousel-item img {
-    position: absolute;      /* Centers the image absolutely within the item */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);  /* Shifts to true center */
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* keeps aspect ratio and fits inside container */
+#ContemporaryCarousel .carousel-item img { /* Remove absolute positioning */
+    position: static;
+    transform: none;
 }
+
+#ContemporaryCarousel .carousel-item { /* Turn off Bootstrap fading behavior */
+    opacity: 1 !important;
+    transition: transform 0.6s ease;
+}
+
+    /* ## CONTEMPORARY CAROUSEL PEEK RULES */
+#ContemporaryCarousel .carousel-item .peek-center,
+#ContemporaryCarousel .carousel-item .peek-left,
+#ContemporaryCarousel .carousel-item .peek-right { /* When sliding, animate the inner images, not the whole item */
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+#ContemporaryCarousel .carousel-item-next .peek-center { /* When a slide is moving left (next) */
+
+    transform: translateX(-30%) scale(0.7);
+    opacity: 0.6;
+}
+#ContemporaryCarousel .carousel-item-next .peek-right {
+    transform: translateX(-30%) scale(1);
+    opacity: 1;
+}
+#ContemporaryCarousel .carousel-item-next .peek-left {
+    transform: translateX(-30%) scale(0.4);
+    opacity: 0.3;
+}
+
+#ContemporaryCarousel .carousel-item-prev .peek-center { /* When a slide is moving right (prev) */
+
+    transform: translateX(30%) scale(0.7);
+    opacity: 0.6;
+}
+#ContemporaryCarousel .carousel-item-prev .peek-left {
+    transform: translateX(30%) scale(1);
+    opacity: 1;
+}
+#ContemporaryCarousel .carousel-item-prev .peek-right {
+    transform: translateX(30%) scale(0.4);
+    opacity: 0.3;
+}
+
+/* Enable perspective so scaling + depth works */
+#ContemporaryCarousel .carousel-inner {
+    perspective: 1600px;
+}
+
+/* incoming slide (from either direction) */
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end {
+    transform: scale(1.15) translateZ(120px);
+    opacity: 1 !important;
+}
+
+/* outgoing slide */
+.carousel-item.active.carousel-item-start,
+.carousel-item.active.carousel-item-end {
+    transform: scale(0.85) translateZ(-200px);
+    opacity: 0.5 !important;
+}
+
+/* ensure all items animate */
+#ContemporaryCarousel .carousel-item {
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+    /* CONTEMPORARY CAROUSEL PEEK RULES */
+/*CONTEMPORARY CAROUSEL*/
+
+/*Carousel Global settings*/
+.carousel-item {
+    transition: transform .6s ease; /* slide */
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-property: opacity; /* fade */
+}
+
+.peek-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 12px;
+}
+
+.peek-center {
+    width: 65%;
+    object-fit: contain;
+}
+
+.peek-left,
+.peek-right {
+    width: 18%;
+    opacity: 0.5;
+    object-fit: contain;
+    transition: opacity .3s ease;
+}
+
+.carousel-item.active .peek-left,
+.carousel-item.active .peek-right {
+    opacity: 0.8;
+}
+/*Carousel Global settings*/
